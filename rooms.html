@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book a room at La Ville Hotel, Alderney. Twin, Double, King Suite, Triple, Family and Quad Suite rooms available.">
+  <title>Our Rooms – La Ville Hotel Alderney</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏨</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar__group">
+      <a href="tel:+441481824784">📞 +44 1481 824784</a>
+      <span class="top-bar__sep">|</span>
+      <a href="mailto:info@lavillehotel.com">✉ info@lavillehotel.com</a>
+    </div>
+    <div class="top-bar__group">
+      <span>Victoria Street · Alderney · Channel Islands</span>
+      <a href="https://www.instagram.com/laville_hotel/" target="_blank" rel="noopener">📷 Instagram</a>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="logo" aria-label="La Ville Hotel">
+      <span class="logo__name">La Ville</span>
+      <span class="logo__tag">Hotel · Alderney</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-list" id="nav-list">
+      <li><a href="index.html">Welcome</a></li>
+      <li><a href="rooms.html" class="active">Our Rooms</a></li>
+      <li><a href="restaurant.html">Restaurant</a></li>
+      <li><a href="chez-bar.html">The Chez</a></li>
+      <li><a href="food-dude.html">Food Dude</a></li>
+      <li><a href="alderney.html">Alderney</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="rooms.html" class="nav-cta">Book Now</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container">
+    <span class="page-hero__kicker">La Ville Hotel · Alderney</span>
+    <h1>Our <em>Rooms</em></h1>
+    <p>20 spacious en-suite rooms to suit every type of guest — from romantic breaks to family adventures.</p>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main>
+  <section class="section">
+    <div class="container">
+
+      <!-- INLINE BOOKING WIDGET -->
+      <div class="inline-bw reveal" id="book">
+        <h2><em>Check</em> Availability</h2>
+        <div class="form-grid">
+          <div class="form-row">
+            <div class="fg"><label for="rb-ci">Check In</label><input type="date" id="rb-ci"></div>
+            <div class="fg"><label for="rb-co">Check Out</label><input type="date" id="rb-co"></div>
+            <div class="fg">
+              <label for="rb-g">Guests</label>
+              <select id="rb-g">
+                <option value="1">1 Guest</option>
+                <option value="2" selected>2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7">7 Guests</option>
+                <option value="8">8 Guests</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label for="rb-r">Rooms</label>
+              <select id="rb-r">
+                <option value="1" selected>1 Room</option>
+                <option value="2">2 Rooms</option>
+                <option value="3">3 Rooms</option>
+                <option value="4">4 Rooms</option>
+                <option value="5">5 Rooms</option>
+              </select>
+            </div>
+            <div class="fg" style="justify-content:flex-end">
+              <label style="opacity:0;pointer-events:none">search</label>
+              <button class="btn btn-primary" id="rb-btn" style="height:44px">Search</button>
+            </div>
+          </div>
+          <div class="avail-results" id="rb-res"></div>
+        </div>
+      </div>
+
+      <!-- ROOM INFO INTRO -->
+      <div class="tc reveal" style="margin-bottom:12px">
+        <span class="label" style="justify-content:center">Accommodation</span>
+        <h2>Choose Your <em>Perfect Room</em></h2>
+        <p style="max-width:600px;margin:10px auto 0">Our very spacious rooms are ideal for relaxing after a day out on the island. All have wardrobes and chests of drawers. Some look over Victoria Street, others the beautiful St Anne's Church.</p>
+      </div>
+
+      <!-- ROOMS GRID (filled by JS) -->
+      <div class="rooms-grid" id="rooms-grid"></div>
+
+      <!-- FACILITIES -->
+      <div class="reveal" style="margin-top:60px">
+        <div class="tc" style="margin-bottom:32px">
+          <span class="label" style="justify-content:center">All Rooms Include</span>
+          <h2>Standard <em>Facilities</em></h2>
+        </div>
+        <div class="cards-grid">
+          <div class="card"><span class="card__icon">📶</span><h3>Free Wi-Fi</h3><p>Fast, complimentary Wi-Fi throughout the hotel for all guests.</p></div>
+          <div class="card"><span class="card__icon">🚿</span><h3>En-suite Bathroom</h3><p>Every room has its own private en-suite with shower and bath.</p></div>
+          <div class="card"><span class="card__icon">☕</span><h3>Tea, Coffee & Nespresso</h3><p>Nespresso machines, tea and coffee making facilities in every room.</p></div>
+          <div class="card"><span class="card__icon">🔌</span><h3>USB Charging</h3><p>USB charging points, hairdryer and quality toiletries provided.</p></div>
+        </div>
+      </div>
+
+      <!-- BREAKFAST LINK -->
+      <div class="cta" style="margin-top:64px;border-radius:12px;padding:48px">
+        <div class="reveal">
+          <span class="label" style="justify-content:center">Start the Day Right</span>
+          <h2>Don't Miss <em>Breakfast</em></h2>
+          <p>The most important meal of the day for adventuring and exploring around Alderney. Served 7:30am–10:00am daily.</p>
+          <div class="cta__btns" style="margin-top:24px">
+            <a href="breakfast.html" class="btn btn-primary">View Breakfast Menu</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container reveal">
+      <h2>Need Help Choosing?</h2>
+      <p>Our friendly team is happy to help you find the perfect room for your stay.</p>
+      <div class="cta__btns">
+        <a href="tel:+441481824784" class="btn btn-primary">📞 +44 1481 824784</a>
+        <a href="mailto:info@lavillehotel.com" class="btn btn-outline">✉ Email Us</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer__brand">
+        <span class="logo__name">La Ville</span>
+        <span class="logo__tag">Hotel · Alderney</span>
+        <p>Situated at the heart of the vibrant Alderney community — 20 spacious en-suite rooms, restaurant, bar and more.</p>
+        <div class="socials" style="margin-top:18px">
+          <a href="https://www.instagram.com/laville_hotel/" target="_blank" rel="noopener">📷</a>
+          <a href="https://www.instagram.com/thechezbar/" target="_blank" rel="noopener">🍹</a>
+        </div>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Welcome</a></li>
+          <li><a href="rooms.html">Our Rooms</a></li>
+          <li><a href="breakfast.html">Breakfast Menu</a></li>
+          <li><a href="restaurant.html">Bar &amp; Restaurant</a></li>
+          <li><a href="chez-bar.html">The Chez Bar</a></li>
+          <li><a href="food-dude.html">Food Dude</a></li>
+          <li><a href="alderney.html">Alderney</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Hotel Hours</h4>
+        <ul style="gap:6px">
+          <li style="color:#fff;font-weight:700;font-size:.84rem">Breakfast</li><li>7:30am – 10:00am daily</li>
+          <li style="color:#fff;font-weight:700;font-size:.84rem;margin-top:6px">Lunch</li><li>12pm – 3pm Tue–Sat</li>
+          <li style="color:#fff;font-weight:700;font-size:.84rem;margin-top:6px">Dinner</li><li>6pm – 9pm Tue–Sat</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <ul style="gap:8px">
+          <li>📍 Victoria Street, Alderney, GY9 3TA</li>
+          <li><a href="tel:+441481824784">📞 +44 1481 824784</a></li>
+          <li><a href="mailto:info@lavillehotel.com">✉ info@lavillehotel.com</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;width:100%">
+      <span>© 2026 LV Hotel Limited</span>
+      <span style="color:rgba(255,255,255,.3)">Victoria Street · Alderney · GY9 3TA</span>
+    </div>
+  </div>
+</footer>
+
+<div id="toast"></div>
+<script src="js/shared.js"></script>
+<script>
+initBookingWidget('rb');
+
+// Render room cards
+const grid = document.getElementById('rooms-grid');
+ROOMS.forEach(rm=>{
+  const amenities=['En-suite','Free Wi-Fi','Tea & Coffee','Nespresso','TV','Hairdryer','USB Charging','Toiletries'];
+  grid.insertAdjacentHTML('beforeend',`
+    <div class="room-card reveal">
+      <div class="room-card__thumb">${rm.icon}</div>
+      <div class="room-card__body">
+        <div class="room-card__meta">
+          <span class="room-card__tag">👤 Up to ${rm.cap}</span>
+          <span class="room-card__tag">🛏 ${rm.beds}</span>
+          <span class="room-card__tag">📐 ${rm.size}</span>
+        </div>
+        <h3>${rm.name}</h3>
+        <p>${rm.desc}</p>
+        <div class="room-card__amenities">${amenities.map(a=>`<span class="room-card__amenity">${a}</span>`).join('')}</div>
+        <div class="room-card__foot">
+          <div class="room-card__price">
+            <strong>From £${rm.pw}</strong>
+            per room / night
+          </div>
+          <button class="btn btn-primary btn-sm" onclick="promptBook('${rm.name}')">Book This Room</button>
+        </div>
+      </div>
+    </div>`);
+});
+</script>
+</body>
+</html>
