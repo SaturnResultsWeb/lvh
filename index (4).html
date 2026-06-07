@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="La Ville Hotel — Alderney's finest hotel on Victoria Street. 20 en-suite rooms, restaurant, The Chez Bar and Food Dude. Book your island escape today.">
+  <meta name="keywords" content="La Ville Hotel, Alderney hotel, Channel Islands hotel, Alderney accommodation, Victoria Street Alderney">
+  <meta property="og:title" content="La Ville Hotel Alderney">
+  <meta property="og:description" content="Situated at the heart of vibrant Alderney. 20 en-suite rooms, great food, The Chez Bar and more.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#2d5a6b">
+
+  <title>La Ville Hotel – Alderney</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon emoji fallback -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏨</text></svg>">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div class="loading-overlay" id="loading">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar__links">
+        <a href="tel:+441481824784">📞 +44 1481 824784</a>
+        <span>|</span>
+        <a href="mailto:info@lavillehotel.com">✉ info@lavillehotel.com</a>
+      </div>
+      <div class="top-bar__links">
+        <span>Victoria Street · Alderney · Channel Islands</span>
+        <a href="https://www.instagram.com/laville_hotel/" target="_blank" rel="noopener" aria-label="Instagram">📷 Instagram</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <!-- Logo -->
+      <a href="#home" class="logo" aria-label="La Ville Hotel Home">
+        <div>
+          <div class="logo__text">La Ville</div>
+          <div class="logo__sub">Hotel · Alderney</div>
+        </div>
+      </a>
+
+      <!-- Mobile Toggle -->
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Nav Links -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" data-page="home">Welcome</a></li>
+        <li><a href="#rooms" data-page="rooms">Our Rooms</a></li>
+        <li><a href="#restaurant" data-page="restaurant">Restaurant</a></li>
+        <li><a href="#chez" data-page="chez">The Chez</a></li>
+        <li><a href="#fooddude" data-page="fooddude">Food Dude</a></li>
+        <li><a href="#alderney" data-page="alderney">Alderney</a></li>
+        <li><a href="#contact" data-page="contact">Contact</a></li>
+        <li><a href="#rooms" class="btn-nav">Book Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content (SPA router target) -->
+  <main id="main-content" role="main"></main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
